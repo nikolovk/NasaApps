@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Nasa.Models.ViewArea>
+
+@{
+    ViewBag.Title = "Polygon List";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Type</td>
+        <td>Rate</td>
+        <td>Polygon</td>
+    </tr>
+    @foreach (var area in Model)
+    {
+        <tr>
+            <td>@area.Id</td>
+            <td>@area.Type</td>
+            <td>@area.Rate</td>
+            
+        </tr>
+    }
+</table>

@@ -1,0 +1,67 @@
+﻿@model Nasa.Models.Area
+
+@{
+    ViewBag.Title = "Upload Polygon";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("UploadPolygon", "Data"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Area</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Type)
+        </div>
+        <div class="editor-field">
+            <select name="Type">
+                <option value="Solar">Solar</option>
+                <option value="Wind">Wind</option>
+                <option value="Geothermal">Geothermal</option>
+            </select>
+            @Html.ValidationMessageFor(model => model.Type)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Rate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Rate)
+            @Html.ValidationMessageFor(model => model.Rate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MagicValue)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MagicValue)
+            @Html.ValidationMessageFor(model => model.MagicValue)
+        </div>
+
+        <div class="editor-label">Points</div>
+        <div class="editor-field">
+            @Html.TextArea("pointsText", new { rows = "5", cols = "25", placeholder = "longitude(-180|180) latitude(-90,90), " })
+        </div>
+
+        <p>
+            <input type="submit" value="Upload" />
+        </p>
+    </fieldset>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

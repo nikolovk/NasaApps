@@ -1,0 +1,108 @@
+﻿html, body, div, ul, li, span, strong, button, a {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('images/backgroundSample.png');
+    font-size: 16px;
+}
+
+#layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+#popup {
+    padding: 15px 20px;
+    min-height: 200px;
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    border: 3px solid #1b2754;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+    #popup ul li {
+        color: #1b2754;
+    }
+
+ul {
+    list-style-type: none;
+    color: white;
+}
+
+#stat-ul li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#stat-ul li {
+    border-radius: 15px;
+}
+
+#button-details {
+    background-color: transparent;
+    margin-top: 10px;
+    width: 80px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 2px;
+    padding-top: 4px;
+}
+
+    #button-details:hover {
+        background-color: #1b2754;
+        color: #fff;
+    }
+
+
+
+#button-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #1b2754;
+    text-align: center;
+    border-radius: 2px;
+}
+
+    #button-close:hover {
+        background-color: #1b2754;
+        color: #fff;
+    }
+
+#statistic a {
+    text-decoration: none;
+}
+
+    #statistic a:hover {
+        background-color: #1b2754;
+        color: #fff;
+    }
+
+#additional-information {
+    position: absolute;
+    left: 350px;
+    top: 20px;
+    position: fixed;
+    width: 100%;
+    height: 90%;
+    border-left: 1px solid #fff;
+}
+
+    #additional-information ul {
+        position: inherit;
+    }
+
+        #additional-information ul li {
+            padding: 5px 10px;
+        }
